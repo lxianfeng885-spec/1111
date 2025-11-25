@@ -14,6 +14,10 @@ export default defineConfig({
       '@': path.resolve(__dirname, './'),
     },
   },
+  // 这一步非常重要，用于在构建时注入环境变量
+  define: {
+    'process.env.API_KEY': JSON.stringify(process.env.API_KEY),
+  },
   build: {
     outDir: 'dist',
     sourcemap: false,

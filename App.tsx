@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Sidebar } from './components/Sidebar';
-import { Editor } from './components/Editor';
-import { AICopilot } from './components/AICopilot';
-import { Doc, Template } from './types';
-import { Icon } from './components/Icon';
-import { TEMPLATES } from './constants';
+import { Sidebar } from '@/components/Sidebar';
+import { Editor } from '@/components/Editor';
+import { AICopilot } from '@/components/AICopilot';
+import { Doc, Template } from '@/types';
+import { Icon } from '@/components/Icon';
+import { TEMPLATES } from '@/constants';
 
 const App: React.FC = () => {
   // State

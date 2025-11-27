@@ -1,30 +1,30 @@
-
-export interface Resource {
-  type: '人员' | '机械' | '材料';
-  name: string;
-  count: number;
-  unit: string;
-}
-
-export interface Entry {
+export interface Doc {
   id: string;
-  date: string; // ISO YYYY-MM-DD
-  category: string; // Main Engineering Category
-  subCategory: string; // Sub Engineering Type
-  location: string; // Road Direction / Section
-  description: string; // Specific Content
-  amount: number;
-  status: '待处理' | '已完成' | '审核中' | '紧急';
-  notes: string;
-  resources: Resource[]; // Personnel, Machinery, Materials
-  photos: string[]; // Base64 strings of photos
+  title: string;
+  content: string;
+  lastModified: number;
+  type: 'general' | 'log' | 'inspection' | 'measurement' | 'visa';
 }
 
-export interface DailyStats {
-  totalAmount: number;
-  categoryBreakdown: Record<string, number>;
-  count: number;
+export interface ChatMessage {
+  id: string;
+  role: 'user' | 'model';
+  text: string;
+  timestamp: number;
+  isThinking?: boolean;
 }
 
-export type SortField = 'date' | 'amount' | 'category' | 'status' | 'location';
-export type SortDirection = 'asc' | 'desc';
+export enum TemplateType {
+  BLANK = 'blank',
+  CONSTRUCTION_LOG = 'construction_log',
+  INSPECTION_RECORD = 'inspection_record',
+  SAFETY_MEETING = 'safety_meeting',
+  SITE_VISA = 'site_visa'
+}
+
+export interface Template {
+  id: TemplateType;
+  name: string;
+  description: string;
+  initialContent: string;
+}

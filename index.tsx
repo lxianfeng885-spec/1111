@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from '@/App';
-import './index.css'; // 如果您有全局 CSS
+import App from './App';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {

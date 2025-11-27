@@ -1,4 +1,4 @@
 {
-  "name": "道路工程资料管理系统",
-  "description": "基于道路方向分类的工程资料记录系统，支持Excel式操作、数据导入导出及AI施工日志分析。"
+  "name": "RoadTech Docs (市政通)",
+  "description": "A specialized documentation and AI assistant platform for municipal highway technicians. Features construction log templates, specification queries, and smart report generation."
 }

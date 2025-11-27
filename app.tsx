@@ -36,7 +36,7 @@ export default function App() {
       setSegments(results);
       setAnalysisState({ status: 'success', message: '時間軸生成成功！' });
     } catch (error) {
-      setAnalysisState({ status: 'error', message: '分析失敗。請檢查 API Key 或網絡連接。' });
+      setAnalysisState({ status: 'error', message: error instanceof Error ? error.message : '分析失敗。請檢查 API Key 或網絡連接。' });
     }
   };
 
